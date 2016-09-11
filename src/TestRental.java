@@ -14,7 +14,7 @@ public class TestRental {
 		Movie movie3 = new Movie("Bravery Heart", Movie.REGULAR);
 		// Rental records
 		Rental rental1 = new Rental(movie1, 5);
-		Rental rental2 = new Rental(movie2, 1);
+		Rental rental2 = new Rental(movie2, 3);
 		Rental rental3 = new Rental(movie3, 3);
 		
 		Customer customer = new Customer("John");
