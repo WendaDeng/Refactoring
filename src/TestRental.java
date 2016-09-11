@@ -25,8 +25,8 @@ public class TestRental {
 		String result =  customer.statement();
 		System.out.println(result);
 		
-		String htmlResult = customer.htmlStatement();
-		System.err.println(htmlResult);
+//		String htmlResult = customer.htmlStatement();
+//		System.err.println(htmlResult);
 	}
 
 }
