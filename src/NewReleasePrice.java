@@ -11,4 +11,9 @@ public class NewReleasePrice extends Price{
 		double result = daysRented * 3;
 		return result;
 	}
+	
+	/**  获取常客的租赁积分，覆盖了抽象父类中的方法  */
+	int getFrequentRenterPoints(int daysRented) {
+		return (daysRented > 1) ? 2 :1;
+	}
 }
