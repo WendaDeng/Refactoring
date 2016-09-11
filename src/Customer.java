@@ -36,6 +36,22 @@ public class Customer {
 		return result;
 	}
 	
+	public String htmlStatement() {
+		Enumeration<Rental> rentals = _rentals.elements();
+		String result = "<h1>Rental Record for <em>" + getName() + "</em></h1><p>\n";
+		while (rentals.hasMoreElements()) {
+			Rental each = rentals.nextElement();
+			
+			// show figures for this rental
+			result += each.getMovie().getTitle() + ": " +
+					String.valueOf(each.getCharge()) + "<br>\n";
+		}
+		// add footer lines
+		result += "<p>You owe <em>" + String.valueOf(getTotalCharge()) + "</em><p>\n";
+		result += "On this rental you earned <em>" + String.valueOf(getTotalFrequentRenterPoints()) + "</em> frequent renter points<p>";
+		return result;
+	}
+	
 	/**  获取总的租赁费用  */
 	private double getTotalCharge() {
 		double result = 0;

@@ -23,8 +23,10 @@ public class TestRental {
 		customer.addRental(rental3);
 		
 		String result =  customer.statement();
-		
 		System.out.println(result);
+		
+		String htmlResult = customer.htmlStatement();
+		System.err.println(htmlResult);
 	}
 
 }
