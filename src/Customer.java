@@ -30,7 +30,7 @@ public class Customer {
 			Rental each = rentals.nextElement();
 			
 			
-			thisAmount = amountFor(each);
+			thisAmount = each.getCharge();
 			
 			// add frequent renter points
 			frequentRenterPoints++;
@@ -50,8 +50,4 @@ public class Customer {
 		return result;
 	}
 	
-	// determine amounts for each line
-	private double amountFor(Rental aRental) {
-		return aRental.getCharge();
-	}
 }
